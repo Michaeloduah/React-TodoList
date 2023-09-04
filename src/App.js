@@ -18,15 +18,15 @@ class App extends Component {
     })
   }
   addTodo = (todo) => {
-    if (this.state.content === '') {
-      todo.id = Math.random()
+    todo.id = Math.random()
+    if (todo.content === '' ) {
+      alert('Add a Valid Todo List')
+    } else {
       let todos = [...this.state.todos, todo];
       this.setState({
         todos
       })
-    } else (
-      alert('Add a valid Todo')
-    )
+    }
   }
   render() {
     return (
